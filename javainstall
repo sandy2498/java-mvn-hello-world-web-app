@@ -8,7 +8,7 @@ agent any
       }
       stage("build code"){
       steps{
-         sh "sudo apt-get install default-jdk"
+         sh "apt-get install default-jdk"
       }
     }
     }
