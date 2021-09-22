@@ -1,0 +1,22 @@
+pipeline {
+  environment {
+   PATH = /usr/share/maven
+  }
+  }
+  }
+  tools { 
+  stages { 
+    stage("build") { 
+      steps { 
+        sh "mvn --version"
+        sh "mvn clean install"
+      }
+    }
+  }
+  post { 
+    always { 
+      cleanWs()
+    }
+  }
+}
+}
