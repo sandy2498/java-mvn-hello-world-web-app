@@ -1,6 +1,9 @@
 pipeline {
 agent any
-    stages { 
+  environment {
+   PATH = "/usr/java:$PATH"
+  }
+   stages { 
     stage("Clean code") { 
       steps { 
       sh "git clone https://github.com/sandy2498/java-mvn-hello-world-web-app"
@@ -8,9 +11,8 @@ agent any
       }
       stage("build code"){
       steps{
-         sh "apt-get install default-jdk"
+         sh "sudo apt-get install default-jdk"
       }
     }
     }
     }
-    
