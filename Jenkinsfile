@@ -25,6 +25,7 @@ pipeline {
        stage('Run') {
             steps {
                 sh '/opt/tomcat/bin/./startup.sh'
+              sh '/opt/tomcat/bin/setclasspath.sh'
             }
         }
     }
