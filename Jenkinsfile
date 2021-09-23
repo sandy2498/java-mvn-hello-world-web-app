@@ -19,7 +19,7 @@ pipeline {
         }
       stage('Deploy') {
             steps {
-                sh 'sudo cp /home/slave_s1/workspace/Pipelinejob_2/target/mvn-hello-world.war /opt/tomcat/webapps'
+                sh 'cp /home/slave_s1/workspace/Pipelinejob_2/target/mvn-hello-world.war /opt/tomcat/webapps'
             }
         }
        stage('Run') {
