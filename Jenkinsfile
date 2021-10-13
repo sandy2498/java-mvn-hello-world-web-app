@@ -28,11 +28,7 @@ stage ('build'){
     }
    
   stage ('deploy'){
-    agent {label 'slave4'}
-      steps{
-        sh 'docker login -u sandy2498 -p Ajja@2498'
-        sh 'docker pull sandy2498/mavenimage1:1.0'
-        sh 'docker run -d -p 9000:8080 sandy2498/mavenimage1:1.0
+   
 
   }
 }
